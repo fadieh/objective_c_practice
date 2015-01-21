@@ -16,12 +16,18 @@ int main(int argc, const char * argv[]) {
         
 //      Basic Data Types
         int aNumber = 24;
-        float anotherNumber = 24.0;
+        int moreNumber = (float)aNumber;
+        float floatNum = 24.5;
         BOOL thisIsTrue = true;
         NSString *aString = @"Hello, my name is Fadie";
         
 //      Log string
         NSLog(aString);
+        
+//      Log Numbers using String Format Specifiers
+        NSLog(@"%d", aNumber);
+        NSLog(@"%.1f", floatNum);
+        NSLog(@"%d", moreNumber);
         
 //      Log Bool by substituting log strings to value
         NSLog(thisIsTrue ? @"True" : @"False");
