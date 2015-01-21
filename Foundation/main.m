@@ -23,9 +23,6 @@ int main(int argc, const char * argv[]) {
 //      Log string
         NSLog(aString);
         
-//      Log integer and float
-        NSLog(aNumber);
-        
 //      Log Bool by substituting log strings to value
         NSLog(thisIsTrue ? @"True" : @"False");
         
@@ -53,5 +50,10 @@ int main(int argc, const char * argv[]) {
         }
         
     }
-    return 1;
+    
+    
+    
+    return 0;
+    
+    
 }
