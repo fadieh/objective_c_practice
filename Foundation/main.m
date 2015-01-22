@@ -8,6 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
+#define PI 3.14159
+#define RAD_TO_DEG(radians) (radians * (180.0/ PI))
+
+// typedef
+
+typedef unsigned char ColorComponent;
+
+// struct
+
+typedef struct {
+    unsigned char red;
+    unsigned char green;
+    unsigned char blue;
+} Color;
+
+// enum
+
+typedef enum {
+    FORD,
+    HONDA,
+    NISSAN,
+    PORSCHE
+} CarModel;
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -104,8 +128,43 @@ int main(int argc, const char * argv[]) {
         for (id model in models) {
             NSLog(@"%@", model);
         }
+        
+//      Macros
+        
+        double angle = PI / 2;
+        NSLog(@"%.1f", RAD_TO_DEG(angle));
+        
+//      Typedef
+        
+        ColorComponent red = 225;
+        ColorComponent green = 160;
+        ColorComponent blue = 0;
+        NSLog(@"Your paint job is (R: %hhu, G: %hhu, B: %hhu)", red, green, blue);
+        
+//      Structs
+        
+        Color carColor = {255, 160, 0};
+        NSLog(@"Your paint job is (R:%hhu, G: %hhu, B: %hhu)", carColor.red, carColor.green, carColor.blue);
+        
+        
+//      Enums
+        
+        CarModel myCar = NISSAN;
+        switch (myCar) {
+            case FORD:
+            case PORSCHE:
+                NSLog(@"You like Western cars?");
+                break;
+            case HONDA:
+            case NISSAN:
+                NSLog(@"You like Japanese cars?");
+                break;
+            default:
+                break;
+        }
     
     return 0;
+        
     
     
     }
