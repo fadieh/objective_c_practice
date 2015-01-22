@@ -55,6 +55,7 @@ int main(int argc, const char * argv[]) {
 //      Log Numbers using String Format Specifiers
         
         NSLog(@"=====Numbers=====");
+        
         NSLog(@"%d", aNumber);
         NSLog(@"%.1f", floatNum);
         NSLog(@"%d", moreNumber);
@@ -66,6 +67,7 @@ int main(int argc, const char * argv[]) {
 //      Arithmetic
         
         NSLog(@"=====Arithmetic=====");
+        
         NSLog(@"%d", 6 + 2);
         NSLog(@"%f", 6.23 + 94.2);
         NSLog(@"%d", 10 * 10);
@@ -82,6 +84,8 @@ int main(int argc, const char * argv[]) {
         
         
 //      Conditionals
+        
+        NSLog(@"=====Conditionals=====");
         
         int modelYear = 1990;
         if (modelYear < 1967) {
@@ -104,6 +108,8 @@ int main(int argc, const char * argv[]) {
         }
         
 //      Loops
+        
+        NSLog(@"=====Loops=====");
         
         int modelYear2 = 1990;
         
@@ -131,10 +137,14 @@ int main(int argc, const char * argv[]) {
         
 //      Macros
         
+        NSLog(@"=====Macros=====");
+        
         double angle = PI / 2;
         NSLog(@"%.1f", RAD_TO_DEG(angle));
         
 //      Typedef
+        
+        NSLog(@"=====Typedef=====");
         
         ColorComponent red = 225;
         ColorComponent green = 160;
@@ -143,11 +153,15 @@ int main(int argc, const char * argv[]) {
         
 //      Structs
         
+        NSLog(@"=====Struct=====");
+        
         Color carColor = {255, 160, 0};
         NSLog(@"Your paint job is (R:%hhu, G: %hhu, B: %hhu)", carColor.red, carColor.green, carColor.blue);
         
         
 //      Enums
+        
+        NSLog(@"=====Enum=====");
         
         CarModel myCar = NISSAN;
         switch (myCar) {
@@ -162,6 +176,49 @@ int main(int argc, const char * argv[]) {
             default:
                 break;
         }
+        
+//      Primitive Arrays
+        
+        NSLog(@"=====Primitive Array=====");
+        
+        int years[4] = {1968, 1970, 1989, 1999};
+        years[0] = 1967;
+        for (int i=0; i<4; i++) {
+            NSLog(@"The year at index %d is: %d", i, years[i]);
+        }
+        
+//      Pointer
+        
+        NSLog(@"=====Pointer=====");
+        
+        int year = 1967; // Define a normal variable
+        int *pointer; // Declare a pointer that points to an int
+        pointer = &year; // Find the memory address of the variable
+        NSLog(@"%d", *pointer); // Dereference the address to get its value
+        *pointer = 1990; // Assign a new value to the memory address
+        NSLog(@"%d", year); // Access the value via the variable.
+        
+//      Null Pointer
+        
+        NSLog(@"=====Null Pointer=====");
+        
+        int year1 = 1967;
+        int *pointer1 = &year1;
+        NSLog(@"%d", *pointer1);
+        pointer1 = NULL;
+        
+//      Void Pointer
+        
+        NSLog(@"=====Void Pointer=====");
+        
+        int year2 = 1967;
+        void *genericPointer = &year2;
+        int *intPointer = (int *)genericPointer;
+        NSLog(@"%d", *intPointer);
+        
+        
+        
+        
     
     return 0;
         

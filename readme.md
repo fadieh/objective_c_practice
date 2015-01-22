@@ -1,6 +1,6 @@
 #Objective-C Practice
 
-A Foundation Command-Line project to explore as much of the Objective-C language as much as possible. I am using this to accustom myself to writing in Objective-C syntax having used Swift for a while before I can use the iOS frameworks.
+A Foundation Command-Line project to explore as much of the Objective-C language as much as possible. I am using this to accustom myself to writing in Objective-C syntax having used Swift for a while before I can use the iOS frameworks. Also I'd like to use this repo in the future to reference back to concepts and play around with the existing code inside the files as a practice tool.
 
 ####Learning Outcomes
 ____
