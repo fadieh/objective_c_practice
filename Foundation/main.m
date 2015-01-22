@@ -32,6 +32,28 @@ typedef enum {
     PORSCHE
 } CarModel;
 
+// function basic syntax
+
+int getRandomInteger(int minimum, int maximum) {
+    return arc4random_uniform((maximum - minimum) + 1) + minimum;
+}
+
+NSString *getRandomMake(NSArray *makes) {
+    int maximum = (int)[makes count];
+    int randomIndex = arc4random_uniform(maximum);
+    return makes[randomIndex];
+}
+
+// declartion of function
+
+NSString *getRandomMake2(NSArray *);
+
+//
+//
+// @autoreleasepool
+//
+//
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -217,7 +239,22 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%d", *intPointer);
         
         
+//        
+//      FUNCTIONS
+//
         
+//      Basic Syntax
+        
+        int randomNumber = getRandomInteger(-10, 10);
+        NSLog(@"Selected a random number between -10 and 10: %d", randomNumber);
+        
+        NSArray *makes = @[@"Honda", @"Ford", @"Nissan", @"Porsche"];
+        NSLog(@"Selected a %@", getRandomMake(makes));
+        
+//      Implementation vs. Declaration (declared before main)
+        
+        NSArray *makes2 = @[@"Honda", @"Ford", @"Nissan", @"Porsche"];
+        NSLog(@"Selected a %@", getRandomMake2(makes2));
         
     
     return 0;
@@ -225,4 +262,13 @@ int main(int argc, const char * argv[]) {
     
     
     }
+    
+}
+
+//      Implementation
+
+NSString *getRandomMake2(NSArray *makes2) {
+    int maximum = (int)[makes2 count];
+    int randomIndex = arc4random_uniform(maximum);
+    return makes2[randomIndex];
 }
