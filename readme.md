@@ -5,7 +5,7 @@ A Foundation Command-Line project to explore as much of the Objective-C language
 ####Learning Outcomes
 ____
 
-- Introduction. Understand the relationship between Objective-C and C.
+- Introduction: Understand the relationship between Objective-C and C.
 - Understand the basics of C before tackling the higher-level aspects of the language. Playing with and research in depth the following: 
  - Variables
  - Constants
